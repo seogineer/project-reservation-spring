@@ -2,6 +2,8 @@
 
 사용 기술 및 도구 : HTML, CSS, JSP, JSTL, Javascript, jQuery, Java 8, Spring Framework 4.3.5, mariaDB 10.5, Git, Eclipse
 
+<br>
+
 ## 1. Main 화면
 ![main](https://user-images.githubusercontent.com/19875940/106590008-02b45200-6590-11eb-844b-aa8a89bbeebd.PNG)
 
