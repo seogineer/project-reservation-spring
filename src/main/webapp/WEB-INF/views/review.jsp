@@ -40,6 +40,30 @@
                             <span class="join_count"><em class="green">${commentTotalCount}건</em> 등록</span></div>
                             <ul class="list_short_review">
                             	<c:forEach items="${commentList}" var="comment">
+	                                <li class="list_item">
+	                                    <div>
+	                                        <div class="review_area">
+	                                            <div class="thumb_area">
+			                            		<c:forEach items="${commentImageList}" var="commentImage">
+	                                            	<c:if test="${comment.commentId == commentImage.reservationUserCommentId}">
+	                                                	<!-- <a class="thumb" title="이미지 크게 보기"> -->
+	                                                	<img width="90" height="90" class="img_vertical_top" src="../detail/download?commentId=${comment.commentId}" alt="리뷰이미지" onclick="pop(this)" style="border:1px solid rgba(0,0,0,.1); cursor:pointer;">
+	                                                	<!-- </a> -->
+	                                                	<!-- <span class="img_count" style="display:none;">1</span> -->
+	                                            	</c:if>
+				                                </c:forEach>
+	                                            </div>
+	                                            <h4 class="resoc_name"></h4>
+	                                            <p class="review">${comment.comment}</p>
+	                                        </div>
+	                                        <div class="info_area">
+	                                            <div class="review_info"> <span class="grade">${comment.score}</span> <span class="name"><c:out value="${fn:substring(comment.reservationEmail,0,4)}"/>****</span> <span class="date"><fmt:formatDate value="${comment.createDate}" pattern="yyyy.MM.dd"/> 방문</span> </div>
+	                                        </div>
+	                                    </div>
+	                                </li>
+                                </c:forEach>
+                            	
+                            	<%-- <c:forEach items="${commentList}" var="comment">
                                 <li class="list_item">
                                     <div>
                                         <div class="review_area no_img">
@@ -51,7 +75,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                </c:forEach>
+                                </c:forEach> --%>
                             </ul>
                         </div>
                         <p class="guide"> <i class="spr_book2 ico_bell"></i> <span>네이버 예약을 통해 실제 방문한 이용자가 남긴 평가입니다.</span> </p>
