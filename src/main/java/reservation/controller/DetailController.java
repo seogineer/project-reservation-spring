@@ -71,7 +71,7 @@ public class DetailController {
 	@RequestMapping("/detail/reserve/{displayInfoId}")
 	public String reserveLoad(@PathVariable(name = "displayInfoId", required = true) int displayInfoId, ModelMap modelMap, HttpSession session) {
 		
-		if(session.getAttribute("isLogin") != null) {	//로그인이 되어있는 경우 예약 화면 호출
+		//if(session.getAttribute("isLogin") != null) {	//로그인이 되어있는 경우 예약 화면 호출
 			List<ProductImage> productImageList = productImageService.selectByDisplayInfoId(displayInfoId);
 			DisplayInfo displayInfo = displayInfoService.selectByDisplayInfoId(displayInfoId);
 			List<ProductPrice> productPriceList = productPriceService.select(displayInfoId);
@@ -82,9 +82,9 @@ public class DetailController {
 			modelMap.addAttribute("randomDate", randomDate());	//전시 날짜는 임의의 날짜
 			
 			return "reserve";
-		} else {	//로그인이 안 되어있는 경우 로그인 화면 호출
-			return "redirect:../../bookinglogin";
-		}
+		//} else {	//로그인이 안 되어있는 경우 로그인 화면 호출
+			//return "redirect:../../bookinglogin";
+		//}
 		
 	}
 	
