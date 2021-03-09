@@ -1,4 +1,4 @@
-# project-reservation-spring
+# clone 네이버 예약
 
 사용 기술 및 도구 : HTML, CSS, JSP, JSTL, Javascript, jQuery, Java 8, Spring Framework 4.3.5, mariaDB 10.5, Git, Eclipse
 
